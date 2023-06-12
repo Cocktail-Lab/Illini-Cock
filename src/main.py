@@ -8,9 +8,9 @@ app = FastAPI()
 
 import openai
 
-openai.api_key = "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"
+# openai.api_key = "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"
 
-completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role":"user","content":"Do you know the Irish whiskey paddy and can you tell me some cocktail recipes with it?"}])
+# completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role":"user","content":"Do you know the Irish whiskey paddy and can you tell me some cocktail recipes with it?"}])
 # print(completion.choices[0].message.content)
 
 
@@ -18,7 +18,7 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 
 @app.get("/")
 def read_root():
-    return {"Hello": completion.choices[0].message.content}
+    return {"Hello": "0.0.0.0"}
 
 
 @app.get("/items/{item_id}")
