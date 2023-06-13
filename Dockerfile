@@ -1,5 +1,8 @@
 FROM python:slim
 
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /code
 
 COPY ./requirements.txt ./
@@ -11,4 +14,4 @@ RUN apt-get update \
 
 COPY ./src ./src
 
-# CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
+# CMD ["python", "src/mysite/manage.py", "runserver" ]

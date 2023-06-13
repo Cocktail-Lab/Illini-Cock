@@ -1,6 +1,3 @@
-fastapi
-uvicorn
-redis
 openai
 Django
 debugpy
