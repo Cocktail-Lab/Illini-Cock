@@ -1,3 +1,4 @@
 openai
 Django
+django-debug-toolbar
 debugpy
