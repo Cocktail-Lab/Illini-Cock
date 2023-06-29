@@ -8,4 +8,7 @@ docker-compose up --build -d
 #用完了记得关
 docker-compose down
 
+#在IDE上做了改动
+记得cd到src的mysite然后python manage.py migrate
+
 如果需要什么再添uwu
