@@ -1,0 +1,11 @@
+#安装toolbar
+python -m pip install django-debug-toolbar
+#创建超级用户(admin)
+python manage.py createsuperuser
+会让你写login->建议用户名admin,邮箱自己邮箱或者瞎写一个,password也是admin,如果说密码太短了直接按y给bypass掉
+#开始setup
+docker-compose up --build -d
+#用完了记得关
+docker-compose down
+
+如果需要什么再添uwu

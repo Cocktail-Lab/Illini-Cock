@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-fqfeoh^z76x&ivcw0%ui=p*%-dst9z9(2lo@o@t!i$_xi)!je@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 if DEBUG:
     import socket  # only if you haven't already imported this
@@ -55,6 +55,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
 ]
 
 ROOT_URLCONF = 'mysite.urls'
