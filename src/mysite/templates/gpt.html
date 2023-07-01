@@ -1,0 +1,11 @@
+<h1>Welcome to Illini-Cock</h1>
+
+<form method="post">
+    {% csrf_token %}
+    Prompt : <input type="text" name="prompt">
+    <button type="submit">Submit</button>
+</form>
+
+<h2>
+    {{ data }}
+</h2>
