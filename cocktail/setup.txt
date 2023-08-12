@@ -1,0 +1,9 @@
+首先安装dependencies
+pip install -r requirements.txt
+创建超级用户 密码和用户名都写成admin
+python manage.py createsuperuser
+这个用来在浏览器上run
+docker-compose up --build -d
+每次做完DB的changes
+python manage.py makemigrations
+python manage.py migrate

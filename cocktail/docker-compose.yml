@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"  # Expose Django's port
+    volumes:
+      - .:/cocktail
+  db:
+    image: postgres:12  # Use PostgreSQL as an example
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
